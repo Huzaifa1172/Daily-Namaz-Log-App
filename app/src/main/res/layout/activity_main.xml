@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="22dp"
+        android:contentDescription="@string/hide_bottom_view_on_scroll_behavior"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerReport"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerReport"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/hide_bottom_view_on_scroll_behavior"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <EditText
+        android:id="@+id/editTextRaqat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Raqat #"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerReport" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="64dp"
+        android:text="Ba-Jamat"
+        app:layout_constraintBottom_toTopOf="@+id/btnF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextRaqat"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerReport" />
+
+    <Button
+        android:id="@+id/btnZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:onClick="ZuhrClicked"
+        android:text="Zuhr"
+        app:layout_constraintBottom_toTopOf="@+id/btnA"
+        app:layout_constraintStart_toStartOf="@+id/btnM"
+        app:layout_constraintTop_toBottomOf="@+id/btnF" />
+
+    <Button
+        android:id="@+id/btnM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="MaghribClicked"
+        android:text="Maghrib"
+        app:layout_constraintBottom_toTopOf="@+id/btnE"
+        app:layout_constraintStart_toStartOf="@+id/btnE"
+        app:layout_constraintTop_toBottomOf="@+id/btnA" />
+
+    <Button
+        android:id="@+id/btnE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:onClick="EshaClicked"
+        android:text="Esha"
+        app:layout_constraintBottom_toTopOf="@+id/btnInsert"
+        app:layout_constraintEnd_toEndOf="@+id/btnInsert"
+        app:layout_constraintStart_toStartOf="@+id/btnInsert"
+        app:layout_constraintTop_toBottomOf="@+id/btnM" />
+
+    <Button
+        android:id="@+id/btnF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="EshaClicked"
+        android:text="Fajar"
+        app:layout_constraintBottom_toTopOf="@+id/btnZ"
+        app:layout_constraintStart_toStartOf="@+id/btnZ"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <Button
+        android:id="@+id/btnA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="12dp"
+        android:onClick="AsarClicked"
+        android:text="Asar"
+        app:layout_constraintBottom_toTopOf="@+id/btnM"
+        app:layout_constraintStart_toStartOf="@+id/btnZ"
+        app:layout_constraintTop_toBottomOf="@+id/btnZ" />
+
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="83dp"
+        android:layout_marginBottom="51dp"
+        android:onClick="insertClicked"
+        android:text="Enter in Databases"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnE" />
+</androidx.constraintlayout.widget.ConstraintLayout>
